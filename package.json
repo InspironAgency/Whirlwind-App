@@ -16,11 +16,11 @@
   "author": "",
   "license": "GPL-3.0-or-later",
   "dependencies": {
-    "@mercuryworkshop/bare-mux": "^2.0.3",
-    "@mercuryworkshop/epoxy-transport": "^2.1.3",
+    "@mercuryworkshop/bare-mux": "^2.0.4",
+    "@mercuryworkshop/epoxy-transport": "^2.1.5",
     "@titaniumnetwork-dev/ultraviolet": "^3.2.6",
     "express": "^4.19.2",
-    "whirlwind-static": "git+https://github.com/Whirlwind-Studio/Whirlwind-Static.git",
+    "whirlwind-static": "github:Whirlwind-Studio/Whirlwind-Static",
     "wisp-server-node": "^1.1.3",
     "ws": "^8.18.0"
   },
