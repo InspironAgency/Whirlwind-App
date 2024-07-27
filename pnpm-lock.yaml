@@ -22,7 +22,7 @@ importers:
         version: 4.19.2
       whirlwind-static:
         specifier: github:Whirlwind-Studio/Whirlwind-Static
-        version: https://codeload.github.com/Whirlwind-Studio/Whirlwind-Static/tar.gz/8faaf1e947aeb5478d5862cbfc5aa29b24bf48b2
+        version: https://codeload.github.com/Whirlwind-Studio/Whirlwind-Static/tar.gz/79d1976587a951c6d6b0678195d1c283fbd6bcb9
       wisp-server-node:
         specifier: ^1.1.3
         version: 1.1.3
@@ -678,8 +678,8 @@ packages:
     engines: {node: '>= 8'}
     hasBin: true
 
-  whirlwind-static@https://codeload.github.com/Whirlwind-Studio/Whirlwind-Static/tar.gz/8faaf1e947aeb5478d5862cbfc5aa29b24bf48b2:
-    resolution: {tarball: https://codeload.github.com/Whirlwind-Studio/Whirlwind-Static/tar.gz/8faaf1e947aeb5478d5862cbfc5aa29b24bf48b2}
+  whirlwind-static@https://codeload.github.com/Whirlwind-Studio/Whirlwind-Static/tar.gz/79d1976587a951c6d6b0678195d1c283fbd6bcb9:
+    resolution: {tarball: https://codeload.github.com/Whirlwind-Studio/Whirlwind-Static/tar.gz/79d1976587a951c6d6b0678195d1c283fbd6bcb9}
     version: 1.0.6
 
   wisp-server-node@1.1.3:
@@ -1376,7 +1376,7 @@ snapshots:
     dependencies:
       isexe: 2.0.0
 
-  whirlwind-static@https://codeload.github.com/Whirlwind-Studio/Whirlwind-Static/tar.gz/8faaf1e947aeb5478d5862cbfc5aa29b24bf48b2: {}
+  whirlwind-static@https://codeload.github.com/Whirlwind-Studio/Whirlwind-Static/tar.gz/79d1976587a951c6d6b0678195d1c283fbd6bcb9: {}
 
   wisp-server-node@1.1.3:
     dependencies:
