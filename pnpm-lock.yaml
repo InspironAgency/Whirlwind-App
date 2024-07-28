@@ -20,6 +20,9 @@ importers:
       compression:
         specifier: ^1.7.4
         version: 1.7.4
+      esbuild:
+        specifier: 0.23.0
+        version: 0.23.0
       express:
         specifier: ^4.19.2
         version: 4.19.2
@@ -30,9 +33,6 @@ importers:
         specifier: ^8.18.0
         version: 8.18.0(bufferutil@4.0.8)(utf-8-validate@6.0.4)
     devDependencies:
-      esbuild:
-        specifier: 0.23.0
-        version: 0.23.0
       eslint:
         specifier: ^8.57.0
         version: 8.57.0
