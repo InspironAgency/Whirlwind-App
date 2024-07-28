@@ -1,6 +1,7 @@
 import express from "express";
+import compression from "compression";
 import { createServer } from "node:http";
-import { publicPath } from "whirlwind-static";
+import { publicPath } from "../lib/index.js";
 import { uvPath } from "@titaniumnetwork-dev/ultraviolet";
 import { epoxyPath } from "@mercuryworkshop/epoxy-transport";
 import { baremuxPath } from "@mercuryworkshop/bare-mux/node";
@@ -9,6 +10,10 @@ import { hostname } from "node:os";
 import wisp from "wisp-server-node"
 
 const app = express();
+
+// Enable Text Compression for faster performance
+app.use(compression());
+
 // Load our publicPath first and prioritize it over UV.
 app.use(express.static(publicPath));
 // Load vendor files last.
