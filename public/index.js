@@ -174,6 +174,9 @@ address.addEventListener("drop", function (e) {
     e.preventDefault();
     address.value = e.dataTransfer.getData("text/plain");
 });
+address.addEventListener("dragover", function(e) {
+    e.preventDefault();
+})
 address.addEventListener("dragenter", function (e) {
     e.preventDefault();
     address.select();
