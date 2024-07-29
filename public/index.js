@@ -3,6 +3,9 @@ import { bodycode } from "./bodycode";
 import { registerSW } from "./register-sw";
 import { iFrameReady } from "./iframeevent";
 import { search } from "./search";
+import { showTime } from "./clock";
+import { initSettings } from "./settings";
+import { initPopup } from "./popup";
 
 const form = document.getElementById("uv-form");
 const address = document.getElementById("uv-address");
@@ -407,3 +410,9 @@ function* enumerate(it, start = 0) {
 }
 
 bodycode();
+
+showTime();
+
+initSettings();
+
+initPopup();
