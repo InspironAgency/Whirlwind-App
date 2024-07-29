@@ -1,4 +1,4 @@
-ocument.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function () {
     const tabButton = document.getElementById("tabButton");
     const themeButton = document.getElementById("themeButton");
     const dropdownContent = document.getElementById("dropdownContent");
