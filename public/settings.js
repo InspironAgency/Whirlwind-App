@@ -35,7 +35,7 @@ export function initSettings() {
             img.alt = option.title;
             img.classList.add("tab-cloak-icon");
             anchor.appendChild(img);
-            anchor.classList.add("tab-cloak-item");
+            anchor.classList.add("dropdown-item");
             anchor.insertAdjacentText("beforeend", option.title);
             anchor.addEventListener("click", function () {
                 changeTab(option.title, option.favicon);
@@ -59,14 +59,14 @@ export function initSettings() {
         }
 
         function changeColor(newTitle, colorCode) {
-            console.log("fired");
             document.body.style.background = colorCode;
         }
 
         colorOptions.forEach(option => {
             const anchor = document.createElement("a");
             anchor.href = "#";
-            anchor.innerHTML = `${option.title}`;
+            anchor.insertAdjacentText("afterbegin", option.title);
+            anchor.classList.add("dropdown-item");
             anchor.addEventListener("click", function () {
                 changeColor(option.title, option.colorCode);
             });

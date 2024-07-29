@@ -191,20 +191,7 @@ function divider(x) {
     return `<span class="bookmark-divider vhidden" id="divider_${x}"><svg id="chart" width="0.25rem" height="2rem"><line x1="0" y1="0" x2="0" y2="32" class="vertical-bar"></line></svg></span>`;
 }
 
-function listenersForDivider(el) {
-    el.addEventListener("dragenter", function (e) {
-        console.log(`entered divider ${el.id}`);
-        e.preventDefault();
-        el.classList.remove("vhidden");
-    });
-    el.addEventListener("drop", function (e) {
-        e.preventDefault();
-    });
-    el.addEventListener("dragleave", function (e) {
-        e.preventDefault();
-        el.classList.add("vhidden");
-    });
-}
+
 
 function updateBookmarks(storage, input_bookmarks) {
     if (storage.getItem("bookmarks") === null) {
