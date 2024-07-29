@@ -30,7 +30,13 @@ export function initSettings() {
         tabOptions.forEach(option => {
             const anchor = document.createElement("a");
             anchor.href = "#";
-            anchor.innerHTML = `<img src="${option.favicon}" alt="${option.title}"> ${option.title}`;
+            let img = document.createElement("img");
+            img.src = option.favicon;
+            img.alt = option.title;
+            img.classList.add("tab-cloak-icon");
+            anchor.appendChild(img);
+            anchor.classList.add("tab-cloak-item");
+            anchor.insertAdjacentText("beforeend", option.title);
             anchor.addEventListener("click", function () {
                 changeTab(option.title, option.favicon);
             });
