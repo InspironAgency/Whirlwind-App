@@ -3,7 +3,6 @@ export function initSettings() {
     document.addEventListener("DOMContentLoaded", function () {
         const tabButton = document.getElementById("tabButton");
         const themeButton = document.getElementById("themeButton");
-        const dropdownContent = document.getElementById("dropdownContent");
         const dropdownContent2 = document.getElementById("dropdownContent2");
         const dropdownColorContent = document.getElementById("dropdownColorContent");
 
