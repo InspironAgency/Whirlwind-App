@@ -23,8 +23,9 @@ body {
     position: absolute;
     bottom: 0;
     left: 0;
+    opacity: 0.6;
     width: 100%;
-    height: auto; 
+    height: 16vh; 
     overflow: hidden;
 }
 
@@ -229,13 +230,15 @@ body {
 }
 
 .search-input {
-    width: 440px;
-    height: 35px;
+    align-items: center;
+    display: flex;
+    width: 440px; 
+    height: 50px; 
     padding: 10px 20px;
     border: none;
     border-radius: 25px;
-    font-size: 16px;
-    font-family: 'Inter';font-size: 22px;
+    font-size: 18px; 
+    font-family: 'Inter', sans-serif; 
     outline: none;
     background: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(10px);
@@ -301,7 +304,6 @@ body {
 }
 
 .navbar {
-    border-bottom-left-radius: 1.125rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -384,7 +386,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.7); /* Darker overlay */
+    background-color: rgba(0, 0, 0, 0.7); 
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.6s ease, visibility 0s 0.3s;
@@ -393,15 +395,15 @@ body {
 
 .popup-content {
     position: relative;
-    background-color: #0a1128; /* Midnight blue */
+    background-color: #0a1128; 
     width: 90%;
     max-width: 600px;
     max-height: 90vh;
     overflow-y: auto;
     border-radius: 12px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4); /* Deeper shadow for depth */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4); 
     padding: 25px;
-    animation: popupOpenAnimation 0.4s ease-out; /* Add open animation */
+    animation: popupOpenAnimation 0.4s ease-out; 
 }
 
 .popup-content::-webkit-scrollbar {
@@ -427,12 +429,12 @@ body {
     right: 12px;
     font-size: 22px;
     cursor: pointer;
-    color: #ffffff; /* White close icon for contrast */
+    color: #ffffff; 
     transition: color 0.3s ease;
 }
 
 .popup-content .close:hover {
-    color: #007bff; /* Highlight on hover */
+    color: #007bff;
 }
 
 @keyframes popupOpenAnimation {
@@ -449,10 +451,10 @@ body {
 .dropdown,
 .dropdown2 {
     margin: 20px 0;
-    background-color: #0c1836; /* Darker background */
+    background-color: #0c1836; 
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Softer shadow */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); 
 }
 
 
@@ -460,15 +462,15 @@ body {
 .cardtext2 {
     margin-bottom: 10px;
     font-weight: bold;
-    font-family: 'Inter', sans-serif; /* Use a Google Font */
+    font-family: 'Inter', sans-serif; 
     font-size: 18px;
-    color: #dce4f7; /* Light blue for text */
+    color: #dce4f7; 
     letter-spacing: 0.5px;
 }
 
 .themebutton,
 .tabbutton {
-    background-color: #1565C0; /* Stylish blue */
+    background-color: #1565C0; 
     color: #ffffff;
     border: none;
     border-radius: 6px;
@@ -478,13 +480,13 @@ body {
     font-family: 'Inter', sans-serif;
     font-size: 16px;
     font-weight: 600;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2); /* Button shadow */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2); 
 }
 
 .themebutton:hover,
 .tabbutton:hover {
-    background-color: #104f8b; /* Darker blue on hover */
-    transform: translateY(-2px); /* Elevation effect */
+    background-color: #104f8b; 
+    transform: translateY(-2px);
 }
 
 
@@ -494,9 +496,9 @@ body {
     margin-top: 12px;
     max-height: 200px;
     overflow-y: auto;
-    border: 1px solid #2a3c5f; /* Softer border */
+    border: 1px solid #2a3c5f; 
     border-radius: 8px;
-    background-color: #132e47; /* Soft midnight */
+    background-color: #132e47; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: opacity 0.3s ease, visibility 0s 0.3s;
 }
@@ -508,7 +510,7 @@ body {
 
 .dropdown-content::-webkit-scrollbar-thumb,
 .dropdown-content2::-webkit-scrollbar-thumb {
-    background-color: rgba(10, 17, 40, 0.3); /* Scroll thumb color */
+    background-color: rgba(10, 17, 40, 0.3); 
     border-radius: 4px;
 }
 
@@ -516,7 +518,7 @@ body {
 .dropdown-content2 a {
     display: block;
     padding: 10px 15px;
-    color: #b3c2df; /* Light blue link color */
+    color: #b3c2df; 
     text-decoration: none;
     transition: background-color 0.3s ease, color 0.3s ease;
     border-radius: 4px;
@@ -524,8 +526,8 @@ body {
 
 .dropdown-content a:hover,
 .dropdown-content2 a:hover {
-    background-color: #1c3a63; /* Dark hover background */
-    color: #ffffff; /* White on hover */
+    background-color: #1c3a63; 
+    color: #ffffff; 
 }
 
 .show {
