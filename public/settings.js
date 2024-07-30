@@ -9,7 +9,7 @@ export function initSettings() {
         const tabOptions = [
             { title: "Google Classroom", favicon: "https://ssl.gstatic.com/classroom/favicon.png" },
             { title: "Google Drive", favicon: "https://ssl.gstatic.com/docs/doclist/images/drive_2022q3_32dp.png" },
-            { title: "Google Docs", favicon: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSISEi0W3Elz1OaILMwU_AiVhmyI_uM2a7ZfWyFDFZHNpz4Ut-6" },
+            { title: "Google Docs", favicon: "https://cdn-icons-png.flaticon.com/512/5968/5968517.png" },
             { title: "Google", favicon: "https://www.google.com/favicon.ico" }
         ];
 
