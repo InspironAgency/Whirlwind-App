@@ -27,4 +27,6 @@ https://whirlwind-app-twydsbzria-uc.a.run.app
 
 Whirlwind was made possible by the following developers:
 
-- [evynxxz](https://github.com/proudparrot2)
+- [evynxxz](https://github.com/evynnn)
+- [liujustin604](https://github.com/liujustin604)
+
