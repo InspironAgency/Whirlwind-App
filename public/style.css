@@ -379,8 +379,8 @@ body {
 
 .game-link {
     position: relative;
-    width: 100px;
-    height: 100px;
+    width: 6.25rem;
+    height: 6.25rem;
 }
 
 .games {
