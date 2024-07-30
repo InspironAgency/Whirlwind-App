@@ -1,30 +1,30 @@
-<p align="center"><img src="https://raw.githubusercontent.com/titaniumnetwork-dev/Ultraviolet-Static/main/public/uv.png" height="200"></p>
+<div align="center">
+  <img src="./public/whirlwind.png" height="75" /> <br /> <br>
+ᯓ★ #1 minimalistic proxy ᯓ★
+</div>
 
-<h1 align="center">Ultraviolet-App</h1>
+<hr />
+Whirlwind is a sleek minimalistic proxy that prioritises user experience and aesthetics for a dreamlike proxy experience. This proxy service was made for the 2024 Titanium Network Proxathon. 
 
-The deployable all-in-one bundle for [Ultraviolet](https://github.com/titaniumnetwork-dev/Ultraviolet), a highly sophisticated proxy used for evading internet censorship or accessing websites in a controlled sandbox using the power of service-workers and more!
+## Demo link 
 
-## Deployment
+https://whirlwind-app-twydsbzria-uc.a.run.app
 
-[![Run on Replit](https://binbashbanana.github.io/deploy-buttons/buttons/remade/replit.svg)](https://github.com/titaniumnetwork-dev/Ultraviolet-App/wiki/Run-on-Replit)
-[![Deploy on Railway](https://binbashbanana.github.io/deploy-buttons/buttons/remade/railway.svg)](https://github.com/titaniumnetwork-dev/Ultraviolet-App/wiki/Deploy-on-Railway)
-[![Remix on Glitch](https://binbashbanana.github.io/deploy-buttons/buttons/remade/glitch.svg)](https://github.com/titaniumnetwork-dev/Ultraviolet-App/wiki/Remix-on-Glitch)
-[![Deploy to Koyeb](https://binbashbanana.github.io/deploy-buttons/buttons/remade/koyeb.svg)](https://github.com/titaniumnetwork-dev/Ultraviolet-App/wiki/Deploy-to-Koyeb)
+## Features
 
-If you are deploying to an alternative service or to a server, refer to [Deploy via terminal](https://github.com/titaniumnetwork-dev/Ultraviolet-App/wiki/Deploy-via-terminal).
+`Minimalistic` Whirlwind operates a sleek yet responsive frontend that has minimal clutter yet packed full of features.
 
-Additional information such as [customizing your frontend](https://github.com/titaniumnetwork-dev/Ultraviolet-App/wiki/Customizing-your-frontend) can be found on the [wiki](https://github.com/titaniumnetwork-dev/Ultraviolet-App/wiki).
+`Customisation` You can choose between many preset themes, including Catppuccin themes or colors of your liking.
 
-Support and updates can be found in our [Discord Server](discord.gg/unblock).
+`Tab Cloaking` Change the title and favicon of Whirlwind from a wide list of preset tab themes, no more trying to find the favicon link of your desired website!
 
-> [!IMPORTANT]  
-> Until deployed on a domain with a valid SSL certificate, Firefox will not be able to load the site. Use chromium for testing on localhost
+`Bookmarks` Whirlwind has a bookmarks function so you can save your favorite pages and enter them with a click of a button.
 
-### HTTP Transport
-The example uses [EpoxyTransport](https://github.com/MercuryWorkshop/EpoxyTransport) to fetch proxied data encrypted. 
+`Security` Whirlwind operates Ultraviolet v3 as the basic default proxy service so all your data is end to end encrypted.
 
-You may also want to use [CurlTransport](https://github.com/MercuryWorkshop/CurlTransport), a different way of fetching encrypted data, or [Bare-Client](https://github.com/MercuryWorkshop/Bare-as-module3), the legacy (unencrypted!) transport.
 
-In public/register-sw.js, look for the line `BareMux.SetTransport("EpxMod.EpoxyClient", { wisp: "ws://localhost:8080/wisp" });`, which can be changed to any of the transports. Make sure to `importScripts` the transport's bundle in `public/uv/sw.js` and add a script tag in both `public/404.html` and `public/index.html`. 
+## Credits
 
-See the [bare-mux](https://github.com/MercuryWorkshop/bare-mux) documentation for more information
+Whirlwind was made possible by the following developers:
+
+- [evynxxz](https://github.com/proudparrot2)
