@@ -350,6 +350,11 @@ body {
     border: none;
     outline: none;
     cursor: pointer;
+    transition: 0.5s;
+}
+
+.settings-button:hover {
+    transform: rotate(45deg);
 }
 
 .settings-button img {
