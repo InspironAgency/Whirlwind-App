@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="A fast and minimal proxy designed to allow users to avoid censorship.">
     <title>Whirlwind</title>
-    <link rel="stylesheet" href="style.min.css" />
+    <link rel="stylesheet" href="style.css" />
     <link href="https://fonts.googleapis.com/css?family=Inter" rel="stylesheet" />
     <link rel="icon" id="favicon" href="/favicon.ico" type="image/x-icon"/>
     <script src="baremux/index.js" defer></script>
@@ -28,6 +28,9 @@
                 <button class="settings-button">
                     <img src="settings.png" alt="Settings" id="openPopup">
                 </button>
+                <a href="games.html" class="games-button">
+                    <img src="games.png" alt="Games" id="openGames">
+                </a>
             </div>
         </div>
         <div class="notch" id="notch"></div>
@@ -91,7 +94,7 @@
                 </div>
             </div>
             <div class="bookmarks-wrapper" id="bookmarks-wrapper"></div>
-        </div>
+        </div >
         <iframe title="Proxied Content" class="uv-frame" id="uv-frame"></iframe>
         <div class="loader" id="loader"></div>
     </div>
