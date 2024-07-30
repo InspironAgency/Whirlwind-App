@@ -8,7 +8,7 @@
     "node": ">=16.0.0"
   },
   "scripts": {
-    "prestart": "esbuild public/index.js --bundle --minify --sourcemap --loader:.html=text --outfile=public/index.min.js && esbuild public/style.css --bundle --minify --sourcemap --loader:.html=text --outfile=public/style.min.css",
+    "prestart": "esbuild public/index.js --bundle --minify --sourcemap --loader:.html=text --outfile=public/index.min.js && esbuild public/style.css --bundle --minify --sourcemap --loader:.html=text --outfile=public/style.min.css && esbuild public/games.js --bundle --minify --sourcemap --loader:.html=text --outfile=public/games.min.js",
     "start": "node src/index.js"
   },
   "keywords": [

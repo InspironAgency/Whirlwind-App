@@ -4,11 +4,15 @@ let isIframeLoaded = false;
 export function bodycode() {
     // yummy event listeners 
     let frame = document.getElementById("uv-frame");
-    
-    frame.addEventListener('load', () => {
+    if (frame ?? false) {
+        frame.addEventListener('load', () => {
+            isIframeLoaded = true;
+            navbar.classList.add('hidden');
+        });
+    } else {
         isIframeLoaded = true;
-        navbar.classList.add('hidden');
-    });
+        startHideTimer();
+    }
     
     notch.addEventListener('mouseenter', () => {
         if (isIframeLoaded) {

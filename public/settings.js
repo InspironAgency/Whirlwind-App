@@ -9,9 +9,12 @@ export function initSettings() {
         const tabOptions = [
             { title: "Google Classroom", favicon: "https://ssl.gstatic.com/classroom/favicon.png" },
             { title: "Google Drive", favicon: "https://ssl.gstatic.com/docs/doclist/images/drive_2022q3_32dp.png" },
-            { title: "Sparx Maths", favicon: "https://sparxmaths.com/favicon.ico" },
+            { title: "Google Docs", favicon: "https://ssl.gstatic.com/docs/documents/images/kix-favicon-2023q4.ico" },
+            { title: "Sparx Maths", favicon: "https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://sparxmaths.com&size=32" },
             { title: "Google", favicon: "https://www.google.com/favicon.ico" },
-            { title: "Desmos", favicon: "https://play-lh.googleusercontent.com/AcmdHoyslp6AnrSMvDMg1o3tmhIuy0wbd8mN-usvDzhO4hiTHMLIavweYOPKmlpglrY" }
+            { title: "Desmos", favicon: "https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://desmos.com&size=32" },
+            { title: "Desmos | Graphing Calculator", favicon: "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://desmos.com/calculator&size=32"},
+            { title: "Whirlwind", favicon: "/favicon.ico" }
         ];
         
         const colorOptions = [
@@ -27,6 +30,14 @@ export function initSettings() {
             { title: "OLED", colorCode: "#000000" },
             { title: "Dark", colorCode: "#31363F" },
         ];
+        if (window.localStorage.getItem("tab_cloak") ?? false) {
+            changeTab(JSON.parse(window.localStorage.getItem("tab_cloak")));
+        }
+
+        if (window.localStorage.getItem("theme") ?? false) {
+            changeColor(JSON.parse(window.localStorage.getItem("theme")));
+        }
+
         // dropdown dynamic thing
         tabOptions.forEach(option => {
             const anchor = document.createElement("a");
@@ -39,7 +50,7 @@ export function initSettings() {
             anchor.classList.add("dropdown-item");
             anchor.insertAdjacentText("beforeend", option.title);
             anchor.addEventListener("click", function () {
-                changeTab(option.title, option.favicon);
+                changeTab(option);
             });
             dropdownContent2.appendChild(anchor);
         });
@@ -53,14 +64,16 @@ export function initSettings() {
             dropdownColorContent.style.display = dropdownColorContent.style.display === "block" ? "none" : "block";
         });
 
-        function changeTab(newTitle, newFavicon) {
-            document.title = newTitle;
+        function changeTab(option) {
+            document.title = option.title;
             const favicon = document.getElementById("favicon");
-            favicon.href = newFavicon;
+            favicon.href = option.favicon;
+            window.localStorage.setItem("tab_cloak", JSON.stringify(option));
         }
 
-        function changeColor(newTitle, colorCode) {
+        function changeColor(colorCode) {
             document.body.style.background = colorCode;
+            window.localStorage.setItem("theme", JSON.stringify(colorCode));
         }
 
         colorOptions.forEach(option => {
@@ -69,7 +82,7 @@ export function initSettings() {
             anchor.insertAdjacentText("afterbegin", option.title);
             anchor.classList.add("dropdown-item");
             anchor.addEventListener("click", function () {
-                changeColor(option.title, option.colorCode);
+                changeColor(option.colorCode);
             });
             dropdownColorContent.appendChild(anchor);
 
