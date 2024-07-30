@@ -1,10 +1,33 @@
 
 export function initSettings() {
     document.addEventListener("DOMContentLoaded", function () {
+
+        function changeTab(option) {
+            document.title = option.title;
+            const favicon = document.getElementById("favicon");
+            favicon.href = option.favicon;
+            window.localStorage.setItem("tab_cloak", JSON.stringify(option));
+        }
+
+        function changeColor(colorCode) {
+            document.body.style.background = colorCode;
+            window.localStorage.setItem("theme", JSON.stringify(colorCode));
+        }
+
+        function changeSearchEngine(template) {
+            let x = document.getElementById("uv-search-engine");
+            if (x ?? false) {
+                x.value = template;
+            }
+            window.localStorage.setItem("search_engine", JSON.stringify(template));
+        }
+
         const tabButton = document.getElementById("tabButton");
         const themeButton = document.getElementById("themeButton");
-        const dropdownContent2 = document.getElementById("dropdownContent2");
+        const searchEngineButton = document.getElementById("searchEngineButton");
+        const dropdownTabContent = document.getElementById("dropdownTabContent");
         const dropdownColorContent = document.getElementById("dropdownColorContent");
+        const dropdownSearchContent = document.getElementById("dropdownSearchContent");
 
         const tabOptions = [
             { title: "Google Classroom", favicon: "https://ssl.gstatic.com/classroom/favicon.png" },
@@ -30,12 +53,25 @@ export function initSettings() {
             { title: "OLED", colorCode: "#000000" },
             { title: "Dark", colorCode: "#31363F" },
         ];
+
+        const searchEngineOptions = [
+            { title: "Google", template: "https://www.google.com/search?q=%s" },
+            { title: "DuckDuckGo", template: "https://duckduckgo.com/?q=%s"},
+            { title: "Bing", template: "https://www.bing.com/search?q=%s" },
+            { title: "Yahoo", template: "https://search.yahoo.com/search?p=%s" },
+
+        ]
+
         if (window.localStorage.getItem("tab_cloak") ?? false) {
             changeTab(JSON.parse(window.localStorage.getItem("tab_cloak")));
         }
 
         if (window.localStorage.getItem("theme") ?? false) {
             changeColor(JSON.parse(window.localStorage.getItem("theme")));
+        }
+
+        if (window.localStorage.getItem("search_engine") ?? false) {
+            changeSearchEngine(JSON.parse(window.localStorage.getItem("search_engine")));
         }
 
         // dropdown dynamic thing
@@ -52,29 +88,8 @@ export function initSettings() {
             anchor.addEventListener("click", function () {
                 changeTab(option);
             });
-            dropdownContent2.appendChild(anchor);
+            dropdownTabContent.appendChild(anchor);
         });
-
-        // toggle dropdown
-        tabButton.addEventListener("click", function () {
-            dropdownContent2.style.display = dropdownContent2.style.display === "block" ? "none" : "block";
-        });
-
-        themeButton.addEventListener("click", function () {
-            dropdownColorContent.style.display = dropdownColorContent.style.display === "block" ? "none" : "block";
-        });
-
-        function changeTab(option) {
-            document.title = option.title;
-            const favicon = document.getElementById("favicon");
-            favicon.href = option.favicon;
-            window.localStorage.setItem("tab_cloak", JSON.stringify(option));
-        }
-
-        function changeColor(colorCode) {
-            document.body.style.background = colorCode;
-            window.localStorage.setItem("theme", JSON.stringify(colorCode));
-        }
 
         colorOptions.forEach(option => {
             const anchor = document.createElement("a");
@@ -85,8 +100,32 @@ export function initSettings() {
                 changeColor(option.colorCode);
             });
             dropdownColorContent.appendChild(anchor);
-
         });
+
+        searchEngineOptions.forEach(option => {
+            const anchor = document.createElement("a");
+            anchor.href = "#";
+            anchor.insertAdjacentText("afterbegin", option.title);
+            anchor.classList.add("dropdown-item");
+            anchor.addEventListener("click", function () {
+                changeSearchEngine(option.template);
+            });
+            dropdownSearchContent.appendChild(anchor);
+        })
+
+        // toggle dropdown
+        tabButton.addEventListener("click", function () {
+            dropdownTabContent.style.display = dropdownTabContent.style.display === "block" ? "none" : "block";
+        });
+
+        themeButton.addEventListener("click", function () {
+            dropdownColorContent.style.display = dropdownColorContent.style.display === "block" ? "none" : "block";
+        });
+
+        searchEngineButton.addEventListener("click", function () {
+            dropdownSearchContent.style.display = dropdownSearchContent.style.display === "block" ? "none" : "block";
+        })
+        
     });
 }
 
