@@ -1,6 +1,6 @@
 <div align="center">
   <img src="./blue_whirlwind.png" height="75" /> <br /> <br>
-ᯓ★ #1 minimalistic proxy ᯓ★
+ᯓ★ #1 minimalistic proxy ★ᯓ
 </div>
 
 <hr />
