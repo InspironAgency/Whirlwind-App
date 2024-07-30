@@ -4,8 +4,8 @@
 .webgl-content .logo, .progress {position: absolute; left: 50%; top: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%);}
 .webgl-content .logo {background: url('progressLogo.Light.png') no-repeat center / contain; width: 9.625rem; height: 8.125rem;}
 .webgl-content .progress {height: 1.125rem; width: 8.8125rem; margin-top: 5.625rem;}
-.webgl-content .progress .empty {background: url('progressEmpty.Light.png') no-repeat right / cover; float: right; width: 100%; height: 100%; display: inline-block;}
-.webgl-content .progress .full {background: url('progressFull.Light.png') no-repeat left / cover; float: left; width: 0%; height: 100%; display: inline-block;}
+.webgl-content .progress .empty {background: url('progressEmpty.Light.png') no-repeat right / cover; float: right; width: 100%; height: 100%; }
+.webgl-content .progress .full {background: url('progressFull.Light.png') no-repeat left / cover; float: left; width: 0%; height: 100%; }
 
 .webgl-content .logo.Dark {background-image: url('progressLogo.Dark.png');}
 .webgl-content .progress.Dark .empty {background-image: url('progressEmpty.Dark.png');}
