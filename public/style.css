@@ -116,7 +116,6 @@ body {
 }
 
 .loader {
-    color: #005cb2;
     position: absolute;
     top: calc(50% - 3.125rem/2);
     left: calc(50% - 3.125rem/2);
@@ -124,9 +123,9 @@ body {
     height: 3.125rem;
     border-radius: 50%;
     border: 0.5rem solid;
+    border-color: #005cb2 #0000;
     animation: l1 1s infinite;
 }
-
 @keyframes l1 {
     to {
         transform: rotate(.5turn)
