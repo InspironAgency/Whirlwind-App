@@ -9,10 +9,11 @@ export function initSettings() {
         const tabOptions = [
             { title: "Google Classroom", favicon: "https://ssl.gstatic.com/classroom/favicon.png" },
             { title: "Google Drive", favicon: "https://ssl.gstatic.com/docs/doclist/images/drive_2022q3_32dp.png" },
-            { title: "Google Docs", favicon: "https://ssl.gstatic.com/docs/doclist/images/drive_2022q3_32dp.png" },
-            { title: "Google", favicon: "https://www.google.com/favicon.ico" }
+            { title: "Sparx Maths", favicon: "https://sparxmaths.com/favicon.ico" },
+            { title: "Google", favicon: "https://www.google.com/favicon.ico" },
+            { title: "Desmos", favicon: "https://play-lh.googleusercontent.com/AcmdHoyslp6AnrSMvDMg1o3tmhIuy0wbd8mN-usvDzhO4hiTHMLIavweYOPKmlpglrY" }
         ];
-
+        
         const colorOptions = [
             { title: "Original", colorCode: "#102a43" },
             { title: "Frappé", colorCode: "#303446" },
