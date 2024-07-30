@@ -28,6 +28,6 @@ https://whirlwind-app-twydsbzria-uc.a.run.app
 Whirlwind was made possible by the following developers:
 
 - [evynxxz](https://github.com/evynnn)
-- [appleflyer](https://github.com/appleflyerv3)
 - [liujustin604](https://github.com/liujustin604)
+- [appleflyer](https://github.com/appleflyerv3)
 - [player_k12](https://github.com/player-k12)
