@@ -82,13 +82,13 @@ body {
 }
 
 .clock {
+    font-weight: 700;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
     font-family: 'Inter', sans-serif;
-    font-size: 1rem;
     font-size: 1.5625rem;
     letter-spacing: 0.375rem;
     text-align: center;
