@@ -13,10 +13,12 @@
     <link rel="preconnect" href="https://t0.gstatic.com/" />
     <link rel="preconnect" href="https://ssl.gstatic.com/" />
     <script src="TemplateData/UnityProgress.js"></script>
-    <script src="Build/UnityLoader.js"></script>
+    <script src="Build/UnityLoader.js" defer></script>
     <script src="/games.min.js" defer></script>
     <script>
-        var gameInstance = UnityLoader.instantiate("gameContainer", "Build/WebGL.json", { onProgress: UnityProgress });
+        window.addEventListener("load", function() {
+            window.gameInstance = UnityLoader.instantiate("gameContainer", "Build/WebGL.json", { onProgress: UnityProgress });
+        });
     </script>
 </head>
 
@@ -42,7 +44,7 @@
         <div id="gameContainer" style="width: 960px; height: 600px"></div>
         <div class="footer">
             <div class="webgl-logo"></div>
-            <button class="fullscreen-icon" onclick="gameInstance.SetFullscreen(1)"></button>
+            <button aria-label="fullscreen" class="fullscreen-icon" onclick="window.gameInstance.SetFullscreen(1)"></button>
             <div class="title">Tanuki Sunset</div>
         </div>
     </div>
