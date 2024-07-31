@@ -34,7 +34,7 @@ export function initSettings() {
             { title: "Google Drive", favicon: "https://ssl.gstatic.com/docs/doclist/images/drive_2022q3_32dp.png" },
             { title: "Google Docs", favicon: "https://ssl.gstatic.com/docs/documents/images/kix-favicon-2023q4.ico" },
             { title: "Sparx Maths", favicon: "https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://sparxmaths.com&size=32" },
-            { title: "Google", favicon: "https://www.google.com/favicon.ico" },
+            { title: "Google", favicon: "https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://www.google.com/favicon.ico&size=32" },
             { title: "Desmos", favicon: "https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://desmos.com&size=32" },
             { title: "Desmos | Graphing Calculator", favicon: "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://desmos.com/calculator&size=32"},
             { title: "Whirlwind", favicon: "/favicon.ico" }
