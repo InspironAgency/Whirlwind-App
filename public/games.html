@@ -7,7 +7,10 @@
     <meta name="description" content="A fast and minimal proxy designed to allow users to avoid censorship.">
     <title>Whirlwind</title>
     <link rel="stylesheet" href="style.min.css" />
-    <link href="https://fonts.googleapis.com/css?family=Inter" rel="stylesheet" />
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Inter" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="styles.css"></noscript>
+    <link rel="preconnect" href="https://t0.gstatic.com/" />
+    <link rel="preconnect" href="https://ssl.gstatic.com/" />
     <link rel="icon" id="favicon" href="/favicon.ico" type="image/x-icon"/>
     <script src="games.min.js" defer></script>
 </head>
@@ -48,7 +51,7 @@
         </div>
         <div class="games">
             <a href="games/html/tanuki-sunset/index.html" data-name="Tanuki Sunset" class="game-link">
-                <img src="games/imgs/tanuki.png" loading="lazy" class="game-image" decoding="async" alt="Tanuki Sunset">
+                <img src="games/imgs/tanuki.png" class="game-image" decoding="async" alt="Tanuki Sunset">
             </a>
         </div>
     </div>
