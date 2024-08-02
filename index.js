@@ -1,8 +1,12 @@
 import { ChemicalServer } from "chemicaljs";
 import express from "express";
+import compression from "compression";
+
 
 const chemical = new ChemicalServer();
 const port = process.env.PORT || 8080;
+
+chemical.use(compression());
 
 chemical.use(
   express.static("public", {
